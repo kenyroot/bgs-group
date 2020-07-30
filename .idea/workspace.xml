@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="74eb55e5-daf7-4eed-99fe-74c071846a23" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/app/Http/Controllers/ApiMemberController.php" afterPath="$PROJECT_DIR$/backend/app/Http/Controllers/ApiMemberController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/routes/api.php" afterPath="$PROJECT_DIR$/backend/routes/api.php" />
     </list>
@@ -48,14 +47,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ApiMemberController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ApiMemberController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/backend/app/Http/Controllers/ApiMemberController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="392">
-              <caret line="100" column="23" lean-forward="true" selection-start-line="100" selection-start-column="23" selection-end-line="100" selection-end-column="23" />
+            <state relative-caret-position="204">
+              <caret line="23" column="14" lean-forward="false" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
               <folding>
-                <element signature="e#126#148#0#PHP" expanded="true" />
-                <element signature="e#553#2109#0#PHP" expanded="false" />
+                <element signature="e#126#147#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -65,7 +63,7 @@
         <entry file="file://$PROJECT_DIR$/backend/tests/Feature/AddMember.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="323">
-              <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+              <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -84,11 +82,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="api.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="api.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/routes/api.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="323">
-              <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+              <caret line="20" column="87" lean-forward="false" selection-start-line="20" selection-start-column="71" selection-end-line="20" selection-end-column="87" />
               <folding />
             </state>
           </provider>
@@ -147,10 +145,10 @@
         <option value="$PROJECT_DIR$/backend/.env" />
         <option value="$PROJECT_DIR$/backend/database/migrations/2020_07_30_103203_create_members_table.php" />
         <option value="$PROJECT_DIR$/backend/app/Http/Controllers/ApiController.php" />
-        <option value="$PROJECT_DIR$/backend/routes/api.php" />
-        <option value="$PROJECT_DIR$/backend/app/Http/Controllers/ApiMemberController.php" />
         <option value="$PROJECT_DIR$/backend/tests/Feature/AddMember.php" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/backend/routes/api.php" />
+        <option value="$PROJECT_DIR$/backend/app/Http/Controllers/ApiMemberController.php" />
       </list>
     </option>
   </component>
@@ -194,6 +192,27 @@
               <item name="bgs-group" type="b2602c69:ProjectViewProjectNode" />
               <item name="bgs-group" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="backend" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="bgs-group" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bgs-group" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="backend" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="bgs-group" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bgs-group" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="backend" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="bgs-group" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bgs-group" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="backend" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="bgs-group" type="b2602c69:ProjectViewProjectNode" />
@@ -261,12 +280,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1596104705509</updated>
-      <workItem from="1596104706794" duration="8183000" />
+      <workItem from="1596104706794" duration="9459000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8183000" />
+    <option name="totallyTimeSpent" value="9459000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -384,21 +403,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/app/Http/Controllers/ApiMemberController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="100" column="23" lean-forward="true" selection-start-line="100" selection-start-column="23" selection-end-line="100" selection-end-column="23" />
-          <folding>
-            <element signature="e#126#148#0#PHP" expanded="true" />
-            <element signature="e#553#2109#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backend/tests/Feature/AddMember.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
-          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -444,8 +452,18 @@
     <entry file="file://$PROJECT_DIR$/backend/routes/api.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
-          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <caret line="20" column="87" lean-forward="false" selection-start-line="20" selection-start-column="71" selection-end-line="20" selection-end-column="87" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/app/Http/Controllers/ApiMemberController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="23" column="14" lean-forward="false" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
+          <folding>
+            <element signature="e#126#147#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
