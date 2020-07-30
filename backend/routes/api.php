@@ -18,3 +18,4 @@ Route::get('members','ApiMemberController@get')->middleware(\App\Http\Middleware
 Route::post('member','ApiMemberController@add')->middleware(\App\Http\Middleware\TokenAuthenticate::class);
 Route::put ('member/{id}','ApiMemberController@update')->middleware(\App\Http\Middleware\TokenAuthenticate::class);
 Route::delete('member/{id}','ApiMemberController@delete')->middleware(\App\Http\Middleware\TokenAuthenticate::class);
+Route::post('member-event/{member_id}/{event_id}','ApiMemberController@addMemberToEvent')->middleware(\App\Http\Middleware\TokenAuthenticate::class);

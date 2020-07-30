@@ -9,6 +9,7 @@
 namespace App\Http\Controllers;
 
 
+use App\Models\Event;
 use App\Models\Member;
 use Illuminate\Http\Request;
 use App\Http\Resources\MemberResource as MemberResource;
@@ -19,7 +20,18 @@ use Illuminate\Support\Facades\Validator;
 class ApiMemberController extends Controller
 {
     public function get(Request $request){
-        $members = Member::all(); //TODO: фильтр
+        $eventId = $request->input('event_id');
+        $members = Member::query();
+        if($eventId){
+            $event = Event::find($eventId);
+            if(!$event){
+                return response()->json([
+                    'error' => 'EVENT_ID_NOT_EXISTS'
+                ], 400);
+            }
+            $members = $members->where('event_id',$event->id);
+        }
+        $members = $members->get(); //TODO: фильтр
         return MemberResource::collection($members);
     }
     public function add(Request $request){
@@ -106,5 +118,25 @@ class ApiMemberController extends Controller
         }
         $member->save();
         return new MemberResource($member);
+    }
+
+    public function addMemberToEvent(Request $request){
+        $memberId = $request->member_id;
+        $member = Member::find($memberId);
+        if(!$member){
+            return response()->json([
+                'error' => 'MEMBER_ID_NOT_EXISTS'
+            ], 400);
+        }
+        $eventId = $request->event_id;
+        $event = Event::find($eventId);
+        if(!$event){
+            return response()->json([
+                'error' => 'EVENT_ID_NOT_EXISTS'
+            ], 400);
+        }
+        $member->event_id = $eventId;
+        $member->save();
+        return response()->json(['STATUS'=>'OK','message'=>'member id='.$member->id.' added event id='.$event->id]);
     }
 }
