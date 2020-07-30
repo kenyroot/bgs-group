@@ -33,6 +33,10 @@ class ApiMemberController extends Controller
             'email.required' => 'EMAIL_REQUIRED',
             'first_name.required' => 'REQUIRED_FIRST_NAME',
             'last_name.required' => 'REQUIRED_LAST_NAME',
+            'first_name.min' => 'LIMIT_MIN_FIRST_NAME',
+            'first_name.max' => 'LIMIT_MAX_FIRST_NAME',
+            'last_name.min' => 'LIMIT_MIN_LAST_NAME',
+            'last_name.max' => 'LIMIT_MAX_LAST_NAME',
         ]);
         if ($validator->fails()) {
             return response()->json([
@@ -54,23 +58,53 @@ class ApiMemberController extends Controller
 
     }
     public function delete(Request $request){
+        $id = $request->id;
+        $member = Member::find($id);
+        if(!$member){
+            return response()->json([
+                'error' => 'ID_NOT_EXISTS'
+            ], 400);
+        }
+        $member->delete();
+        return response()->json(['error'=>'FALSE','message'=>'member id='.$id.' deleted']);
+    }
+    public function update(Request $request){
+
+        // тут будет обновление last_name и first_name, имейл обычно не разрешают изменять
         $validator = Validator::make($request->all(), [ // TODO: можно вынести в свой Request
-            'id' => 'required|exists:members,id',
+//            'id' => 'required|exists:members,id',
+            'first_name' => 'string|min:3|max:512',
+            'last_name' => 'string|min:3|max:512',
         ], [
-            'id.exists' => 'ID_NOT_EXISTS',
-            'id.required' => 'REQUIRED_ID',
+//            'id.exists' => 'ID_NOT_EXISTS',
+//            'id.required' => 'REQUIRED_ID',
+            'first_name.min' => 'LIMIT_MIN_FIRST_NAME',
+            'first_name.max' => 'LIMIT_MAX_FIRST_NAME',
+            'last_name.min' => 'LIMIT_MIN_LAST_NAME',
+            'last_name.max' => 'LIMIT_MAX_LAST_NAME',
         ]);
         if ($validator->fails()) {
             return response()->json([
                 'error' => $validator->errors()->first()
             ], 400);
         }
-        $id = $request->input('id');
-        $member = Member::find($id);
-        $member->delete();
-        return response()->json(['error'=>'FALSE','message'=>'member id='.$id.' deleted']);
-    }
-    public function update(Request $request){
 
+        $firstName = $request->input('first_name');
+        $lastName = $request->input('last_name');
+        $id = $request->id;
+        $member = Member::find($id);
+        if(!$member){
+            return response()->json([
+                'error' => 'ID_NOT_EXISTS'
+            ], 400);
+        }
+        if($firstName){
+            $member->first_name = $firstName;
+        }
+        if($lastName){
+            $member->last_name = $lastName;
+        }
+        $member->save();
+        return new MemberResource($member);
     }
 }

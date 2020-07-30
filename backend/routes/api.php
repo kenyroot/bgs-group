@@ -15,6 +15,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('members','ApiMemberController@get')->middleware(\App\Http\Middleware\TokenAuthenticate::class);
-Route::post('add-member','ApiMemberController@add')->middleware(\App\Http\Middleware\TokenAuthenticate::class);
-Route::post('update-member','ApiMemberController@update')->middleware(\App\Http\Middleware\TokenAuthenticate::class);
-Route::delete('member','ApiMemberController@delete')->middleware(\App\Http\Middleware\TokenAuthenticate::class);
+Route::post('member','ApiMemberController@add')->middleware(\App\Http\Middleware\TokenAuthenticate::class);
+Route::put ('member/{id}','ApiMemberController@update')->middleware(\App\Http\Middleware\TokenAuthenticate::class);
+Route::delete('member/{id}','ApiMemberController@delete')->middleware(\App\Http\Middleware\TokenAuthenticate::class);
