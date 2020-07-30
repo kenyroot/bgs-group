@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::get('members','ApiMemberController@get')->middleware(\App\Http\Middleware\TokenAuthenticate::class);
+Route::post('add-member','ApiMemberController@add')->middleware(\App\Http\Middleware\TokenAuthenticate::class);
+Route::post('update-member','ApiMemberController@update')->middleware(\App\Http\Middleware\TokenAuthenticate::class);
+Route::delete('member','ApiMemberController@delete')->middleware(\App\Http\Middleware\TokenAuthenticate::class);
